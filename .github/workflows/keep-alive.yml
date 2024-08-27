@@ -1,0 +1,19 @@
+name: Keep Application Active
+
+on:
+  schedule:
+    - cron: "*/10 * * * *" # runes every 10 minutes"
+  workflow_dispatch: # Allows manual triggering of the workflow
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send request to keep application active
+        run: curl -s ${{ secrets.SERVICE_URL_1 }} > /dev/null
+      - name: Send request to keep application active
+        run: curl -s ${{ secrets.SERVICE_URL_2 }} > /dev/null
+      - name: Send request to keep application active
+        run: curl -s ${{ secrets.SERVICE_URL_3 }} > /dev/null
+
