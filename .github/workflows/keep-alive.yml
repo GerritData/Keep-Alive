@@ -22,4 +22,6 @@ jobs:
         run: curl -s ${{ secrets.SERVICE_URL_2 }} > /dev/null
       - name: Send request to keep application active
         run: curl -s ${{ secrets.SERVICE_URL_3 }} > /dev/null
+      - name: Send request to keep application active
+        run: curl -s ${{ secrets.SERVICE_URL_4 }} > /dev/null
 
