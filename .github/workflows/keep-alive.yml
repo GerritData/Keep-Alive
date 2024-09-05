@@ -16,6 +16,8 @@ jobs:
         run: echo ${{ secrets.SERVICE_URL_2 }}
       - name: Print SERVICE_URL_3
         run: echo ${{ secrets.SERVICE_URL_3 }}
+      - name: Print SERVICE_URL_4
+        run: echo ${{ secrets.SERVICE_URL_4 }}
       - name: Send request to keep application active
         run: curl -s ${{ secrets.SERVICE_URL_1 }} > /dev/null
       - name: Send request to keep application active
@@ -24,4 +26,3 @@ jobs:
         run: curl -s ${{ secrets.SERVICE_URL_3 }} > /dev/null
       - name: Send request to keep application active
         run: curl -s ${{ secrets.SERVICE_URL_4 }} > /dev/null
-
